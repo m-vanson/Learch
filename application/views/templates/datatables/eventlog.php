@@ -51,7 +51,11 @@ $resultsCount = count($results['hits']['hits']);
                                         }
 
                                         echo '<td><span class="label ' . $label . '">' . $results['hits']['hits'][$i]['_source']['log']['level'] . '</span></td>';
-                                        echo '<td>' . nl2br($results['hits']['hits'][$i]['highlight']['message'][0]) . '</td>';
+                                        if (isset($results['hits]']['hits'][$i]['highlight'])) {
+                                            echo '<td>' . nl2br($results['hits']['hits'][$i]['highlight']['message'][0]) . '</td>';
+                                        } else {
+                                            echo '<td>' . nl2br($results['hits']['hits'][$i]['_source']['message']) . '</td>';
+                                        }
                                         echo '</tr>';
                                     }
                                     ?>

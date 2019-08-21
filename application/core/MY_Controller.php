@@ -29,7 +29,8 @@ class MY_Controller extends CI_Controller {
 
     public function template($template_name, $data) {
         $this->load->view('templates/header', $data);
-        $this->load->view('templates/sidebar', $data);
+        $this->load->view('templates/main-sidebar', $data);
+        $this->load->view('templates/control-sidebar', $data);
         $this->load->view('templates/pagehead', $data);
 
         /*
