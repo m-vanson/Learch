@@ -18,4 +18,6 @@ Use the following in the Kibana dev tools:
  $config['elasticHosts'] = [
         'http://192.168.178.4:9200'
     ];
- To you elastic host.
+ to your elastic host.
+
+Read through the rest of the config file. It should be pretty self explanatory.
